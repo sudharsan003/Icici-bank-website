@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICICI Bank - 3-in-1 Account</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    
+    .navbar {
+      background-color: #f47125;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+    }
+
+    .branding img {
+      height: 40px;
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+   
+    .head {
+      background-color: #bf580f;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .head h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .head p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background-color: white;
+      color: #bf580f;
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #f47125;
+      color: white;
+    }
+
+    
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card.orange {
+      background-color: #f47125;
+      color: white;
+    }
+
+    .card.orange p {
+      color: white;
+    }
+
+    
+    .info-section {
+      padding: 2rem;
+      background-color: #fff;
+    }
+
+    .info-section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #222;
+    }
+
+    .account-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .account-types h4 {
+      color: #a52a2a;
+      margin-bottom: 0.5rem;
+    }
+
+    .account-types p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    
+    .footer {
+      background-color: #f47125;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .head h1 {
+        font-size: 2rem;
+      }
+      .head p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <header class="navbar">
+    <div class="container">
+      <div class="branding">
+        <img src="/task/logo.JPEG" alt="ICICI Bank Logo">
+        <div class="logo">ICICI Bank</div>
+      </div>
+      <nav class="nav-links">
+        <a href="/task/page12.html">Home</a>
+        <a href="#">Personal</a>
+        <a href="#">Corporate</a>
+        <a href="#">NRI</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section class="head">
+    <h1>India's Most Comprehensive</h1>
+    <p><strong>3-in-1 Account (Savings + Demat + Trading)</strong></p>
+    <button class="btn">Apply Now</button>
+  </section>
+
+  
+  <section class="cards">
+    <div class="card">
+      <p>Be investment ready with Savings, Demat & Trading Account</p>
+      <img src="/task/s1.jpeg" alt="Saving" />
+    </div>
+    <div class="card orange">
+      <p>Live your dreams with an exclusive Loan and instant disbursal</p>
+      <img src="/task/s2.jpeg" alt="Loan" />
+    </div>
+    <div class="card">
+      <p>Instant payment & fund transfer solutions at your fingertips</p>
+      <img src="/task/s3.jpeg" alt="iMobile" />
+    </div>
+    <div class="card orange">
+      <p>Spending just got easier with MyBank Credit Card</p>
+      <img src="/task/s4.jpeg" alt="Card" />
+    </div>
+    <div class="card">
+      <p>Explore offers of your choice</p>
+      <img src="/task/s5.jpeg" alt="Offers" />
+    </div>
+  </section>
+
+  
+  <section class="info-section">
+    <h2>Explore Our Account Types</h2>
+    <div class="account-types">
+      <div>
+        <h4>Basic Savings Account</h4>
+        <p>Simple, interest-earning account with secure storage and minimum balance requirements.</p>
+      </div>
+      <div>
+        <h4>Instant Savings Account</h4>
+        <p>Open instantly online with Aadhaar; includes features like 12-month FD and app access.</p>
+      </div>
+      <div>
+        <h4>Privilege Savings Account</h4>
+        <p>Priority service, locker discounts, and dedicated banker support for premium customers.</p>
+      </div>
+      <div>
+        <h4>Women's Savings Account</h4>
+        <p>Exclusive benefits for women including offers, lockers, and self-development programs.</p>
+      </div>
+      <div>
+        <h4>Family Savings Account</h4>
+        <p>One account for the whole family with benefits like lower balances and wealth services.</p>
+      </div>
+      <div>
+        <h4>3-in-1 Accounts</h4>
+        <p>Combine Trading, Demat, and Savings into one integrated account for easy investing.</p>
+      </div>
+      <div>
+        <h4>Salaried Accounts</h4>
+        <p>Zero-balance accounts with added perks for salaried individuals across industries.</p>
+      </div>
+      <div>
+        <h4>NRE/NRO Accounts</h4>
+        <p>Accounts tailored for NRIs to manage income earned abroad and in India efficiently.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <p>&copy; 2025 ICICI Bank. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {
+           margin: 0;
+           padding: 0;
+         }
+
+       .box{
+        background-color: rgb(240, 76, 6);
+        color: aliceblue;
+        height:100px;
+        width: 100%;
+        animation: animate;
+        animation-duration: 3s;
+       } 
+       
+       @keyframes animate {
+         from{
+                transform: translate(0px);
+            }
+            to{
+                transform: translate(200px,200px) rotate(360deg) scale(2);
+            } 
+        }   
+
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>icici bank</h1>
+    </div>
+    
+</body>
+</html>
