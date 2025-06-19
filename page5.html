@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ICICI Bank Credit Cards</title>
+  <title>Mutual Funds - ICICI</title>
   <style>
     * {
       margin: 0;
@@ -14,15 +14,13 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
+    
     .navbar {
       background-color: #f47125;
       color: white;
@@ -63,96 +61,82 @@
       text-decoration: underline;
     }
 
-    
-    .hero {
-      background-color: #808080d7; 
-      color: white;
-      padding: 100px 20px;
+    /* Mutual Funds Section */
+    .funds-section {
+      background-color: #fff2eb;
+      padding: 3rem 2rem;
+      flex: 1;
+    }
+
+    .funds-section h2 {
       text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
     }
 
-    .hero-text h2 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    .fund-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .hero-text p {
-      font-size: 20px;
-    }
-
-    .cards {
-      padding: 60px 20px;
-      background-color: #fff;
-      text-align: center;
-    }
-
-    .cards h2 {
-      font-size: 30px;
-      margin-bottom: 40px;
-      color: #222;
-    }
-
-    .card-row {
+    .fund-card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      /* margin-bottom: 40px; */
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      width: 100%;
-      max-width: 360px;
-      min-width: 300px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      flex-direction: column;
+      justify-content: space-between;
       transition: transform 0.3s ease;
-      text-align: center;
-      flex: 1 1 30%;
     }
 
-    .card:hover {
+    .fund-card:hover {
       transform: translateY(-5px);
     }
 
-    .card img {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 8px;
+    .fund-icon {
+      font-size: 2rem;
+      color: #e2521d;
+      margin-bottom: 1rem;
     }
 
-    .card h3 {
-      color: #004A7F;
-      margin-top: 15px;
-      font-size: 20px;
+    .fund-card h3 {
+      font-size: 1.2rem;
+      color: #1e2a38;
+      margin-bottom: 1rem;
     }
 
-    .card p {
-      margin-top: 10px;
-      font-size: 15px;
-      color: #555;
+    .fund-card ul {
+      list-style-type: disc;
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
 
+    .fund-card .more-link {
+      color: #f47125;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .fund-card .more-link span {
+      margin-left: 6px;
+    }
+
+    /* Footer */
     .footer {
       background-color: #f47125;
       color: white;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      .card {
-        width: 100%;
-        max-width: 90%;
-      }
-
       .navbar .container {
         flex-direction: column;
         gap: 1rem;
@@ -167,16 +151,24 @@
       .nav-links a {
         margin: 0.5rem;
       }
+
+      .fund-card {
+        width: 100%;
+      }
+
+      .funds-section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
- 
+  
   <header class="navbar">
     <div class="container">
       <div class="branding">
-        <img src="./logo.JPEG" alt="ICICI Bank Logo">
+        <img src="./img/logo.JPEG" alt="ICICI Logo" />
         <div class="logo">ICICI Bank</div>
       </div>
       <nav class="nav-links">
@@ -189,47 +181,51 @@
     </div>
   </header>
 
-  
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Explore Our Credit Cards</h2>
-      <p>Choose the card that suits your lifestyle</p>
-    </div>
-  </section>
+  <!-- Mutual Funds Section -->
+  <section class="funds-section">
+    <h2>Mutual Funds tailored for you</h2>
+    <div class="fund-cards">
 
-  <!-- Credit Cards Section -->
-  <section class="cards">
-    <h2>Our Credit Cards</h2>
+      <div class="fund-card">
+        <div>
+          <div class="fund-icon">📈</div>
+          <h3>Equity Funds</h3>
+          <ul>
+            <li>Diversification of Funds</li>
+            <li>Suitable for various risk appetites</li>
+            <li>Potential for favourable returns</li>
+            <li>Includes Large, Mid & Small Cap Funds</li>
+          </ul>
+        </div>
+        <a class="more-link" href="#">KNOW MORE <span>→</span></a>
+      </div>
 
-    <div class="card-row">
-      <div class="card">
-        <img src="./times-black.jpeg" alt="Platinum Chip Credit Card">
-        <h3>Platinum Chip Credit Card</h3>
-        <p>No joining or annual fee. Earn rewards and enjoy discounts on dining and movies.</p>
+      <div class="fund-card">
+        <div>
+          <div class="fund-icon">💰</div>
+          <h3>Debt Funds</h3>
+          <ul>
+            <li>Lower volatility</li>
+            <li>Ideal for lower risk appetite</li>
+            <li>Exposure to debt and money market instruments</li>
+            <li>Focus on capital preservation</li>
+          </ul>
+        </div>
+        <a class="more-link" href="#">KNOW MORE <span>→</span></a>
       </div>
-      <div class="card">
-        <img src="./coral.jpeg" alt="Coral Credit Card">
-        <h3>Coral Credit Card</h3>
-        <p>₹500 joining fee. 10,000+ points, 25% off on movies, and lounge access.</p>
-      </div>
-      <div class="card">
-        <img src="./rubyx.jpeg" alt="Rubyx Credit Card">
-        <h3>Rubyx Credit Card</h3>
-        <p>Premium rewards, lounge access, and dining discounts on every spend.</p>
-      </div>
-    </div>
 
-    <div class="card-row">
-      <div class="card">
-        <img src="./sapphiro.jpeg" alt="Sapphiro Credit Card">
-        <h3>Sapphiro Credit Card</h3>
-        <p>Elite perks: wellness, golf, entertainment & complimentary DragonPass.</p>
+      <div class="fund-card">
+        <div>
+          <div class="fund-icon">🔁</div>
+          <h3>Hybrid Funds</h3>
+          <ul>
+            <li>Diversified across equity, debt, metals & overseas</li>
+            <li>Helps manage risks with moderate volatility</li>
+          </ul>
+        </div>
+        <a class="more-link" href="#">KNOW MORE <span>→</span></a>
       </div>
-      <div class="card">
-        <img src="./emeralde.jpeg" alt="Emeralde Credit Card">
-        <h3>Emeralde Credit Card</h3>
-        <p>Unlimited lounge access, fuel waivers, golf rounds & premium lifestyle.</p>
-      </div>
+
     </div>
   </section>
 
